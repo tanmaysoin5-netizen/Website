@@ -1,0 +1,14 @@
+[
+  {
+    "id": "be10dd13-49ce-4e8f-ad7d-28a35334839e",
+    "username": "testuser",
+    "passwordHash": "$2b$10$11xVjac7vNl.1hBvFR0UWOD13fuQK3tORb4np.LN7sPCMXLutzUP.",
+    "createdAt": "2025-11-18T18:16:42.556Z"
+  },
+  {
+    "id": "91958ba0-a985-473d-9962-90412015b6b0",
+    "username": "tanmaysoin5@gmail.com",
+    "passwordHash": "$2b$10$4mrrw8qwygsRMMl5LFVziuy9JzfQD93YImtwNjOsLIZRn4AQd2Dxa",
+    "createdAt": "2025-11-19T17:14:24.168Z"
+  }
+]

@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Login — NextWear</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    /* Background using your uploaded image */
+    html,
+    body {
+      height: 100%;
+      margin: 0
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      /* use the exact path you provided - your environment should map it */
+      background-image: linear-gradient(180deg, rgb(8, 97, 222), rgba(5, 29, 30, 0.55)), url("/mnt/data/df9b3332-298b-4332-9363-3015c0543aee.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    /* translucent centered card */
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 22px;
+      border-radius: 12px;
+      width: 360px;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: center;
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px
+    }
+
+    h3 {
+      margin: 6px 0 12px 0
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6)
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #00b0ff;
+      color: #042028;
+      cursor: pointer;
+      font-weight: 600
+    }
+
+    .muted {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px
+    }
+
+    a {
+      color: #aee7ff
+    }
+
+    #msg {
+      color: #ffb3b3;
+      margin-top: 8px
+    }
+
+    @media (max-width:420px) {
+      .card {
+        width: 92%;
+        padding: 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card" role="dialog" aria-labelledby="loginTitle">
+    <div class="logo">🛍 NextWear</div>
+    <h3 id="loginTitle">Welcome — sign in</h3>
+
+    <form id="login-form">
+      <input id="nameOrEmail" name="username" type="text" placeholder="Name or Email" autocomplete="username" />
+      <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" />
+      <button id="btn" type="submit">Enter</button>
+    </form>
+
+    <div id="msg" aria-live="polite"></div>
+
+    <p class="muted">Don't have password? <a href="/signup.html">Create / Use password</a></p>
+  </div>
+
+  <script>
+    // Auto-redirect if already logged in
+    (async function checkLogin() {
+      try {
+        const res = await fetch('/auth/check');
+        const data = await res.json();
+        if (data.authenticated) {
+          window.location.href = '/index.html';
+        }
+      } catch (e) {
+        // ignore error, stay on login page
+      }
+    })();
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = (document.getElementById('nameOrEmail').value || '').trim();
+      const pw = (document.getElementById('password').value || '').trim();
+      const msg = document.getElementById('msg');
+      msg.textContent = '';
+
+      if (!username || !pw) { msg.textContent = 'Enter name/email and password'; return; }
+
+      try {
+        const res = await fetch('/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password: pw })
+        });
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          // success: open site
+          window.location.href = '/index.html';
+          return;
+        }
+        msg.textContent = data.error || 'Access denied';
+      } catch (err) {
+        console.error('Login error', err);
+        msg.textContent = 'Network error';
+      }
+    });
+  </script>
+</body>
+
+</html>

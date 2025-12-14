@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>NextWear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    /* small adjustments so logout button fits visually with existing controls */
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .controls .logout-btn {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* mobile wrap */
+    @media (max-width:700px) {
+      .controls {
+        flex-wrap: wrap
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <h1>NextWear</h1>
+      <p class="tagline">Find outfits you love — smart suggestions included</p>
+    </div>
+
+    <div class="controls">
+      <input id="search-input" type="search" placeholder="Search products, colors, styles..." />
+
+      <select id="gender-filter" aria-label="Filter by gender">
+        <option value="all">All</option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+        <option value="unisex">Unisex</option>
+      </select>
+
+      <select id="category-filter" aria-label="Filter by category">
+        <option value="">All categories</option>
+        <option value="shirt">Shirts</option>
+        <option value="pants">Pants</option>
+        <option value="dress">Dresses</option>
+        <option value="jacket">Jackets</option>
+        <option value="shoes">Shoes</option>
+      </select>
+
+      <!-- Min price selector -->
+      <select id="minprice-filter" aria-label="Filter by minimum price">
+        <option value="0" selected>All prices</option>
+        <option value="20">Min ₹20</option>
+        <option value="100">Min ₹100</option>
+        <option value="500">Min ₹500</option>
+      </select>
+
+      <button id="search-btn">Search</button>
+
+      <button id="view-cart-btn" class="cart-btn">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+
+      <!-- LOGOUT button -->
+      <button id="logout-btn" class="logout-btn" title="Log out">Logout</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Elevate your wardrobe</h2>
+      <p>Browse curated clothes. Click on product they may provide you maching items.</p>
+      <button id="shop-now" class="primary">Shop Now</button>
+    </div>
+  </section>
+
+  <!--🔥Seasonal Sale section (NEW) -->
+  <section id="sale-section" class="sale-section container">
+    <div class="sale-header">
+      <h2>Seasonal Sale</h2>
+      <p id="sale-subtitle"></p>
+    </div>
+    <div id="sale-grid" class="grid sale-grid"> </div>
+  </section>
+
+  <!-- Order banner (shown after Buy Now) -->
+  <div id="order-banner" style="
+    max-width:1200px;
+    margin:10px auto 0;
+    padding:10px 14px;
+    border-radius:12px;
+    background:#ecfdf3;
+    color:#166534;
+    display:none;              /* start hidden, JS will set to 'flex' */
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    font-size:13px;
+  ">
+    <span id="order-text"></span>
+    <button id="cancel-order-btn" class="muted" style="padding:6px 10px;font-size:12px;">
+      Cancel order
+    </button>
+  </div>
+
+  <!-- Products Grid -->
+  <main>
+    <section id="products-grid" class="grid container">
+      <div style="grid-column:1/-1;text-align:center;padding:40px;color:rgba(255,255,255,0.5);">Loading products...
+      </div>
+    </section>
+  </main>
+
+  <!-- Orders history section -->
+  <section id="orders-panel" class="container orders-panel">
+    <h2>Your Orders</h2>
+    <div id="orders-list" class="orders-list">
+      <!-- Orders will be injected here by app.js -->
+    </div>
+  </section>
+
+
+  <!-- Product Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close" class="close-btn">✕</button>
+      <div id="product-detail"></div>
+
+      <h3>Recommended for you</h3>
+      <div id="recommendations" class="grid small"></div>
+    </div>
+  </div>
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="drawer hidden">
+    <button id="close-cart" class="close-btn">Close</button>
+
+    <h2>Your Cart</h2>
+
+    <div id="cart-list"></div>
+    <div id="cart-total"></div>
+
+    <!-- payment method chooser -->
+    <div class="payment-options">
+      <p class="payment-title">Choose payment method</p>
+      <div class="payment-buttons">
+        <button class="payment-btn active" data-method="gpay">GPay</button>
+        <button class="payment-btn" data-method="phonepe">PhonePe</button>
+        <button class="payment-btn" data-method="cod">Cash on Delivery</button>
+      </div>
+    </div>
+
+    <div class="cart-actions">
+      <button id="checkout-btn" class="primary">Buy Now</button>
+      <button id="clear-cart-btn" class="muted">Clear Cart</button>
+    </div>
+
+    <!-- 🔹 NEW: checkout form (shown after clicking Buy Now) -->
+    <div id="checkout-form" class="checkout-form hidden">
+      <h3>Shipping details</h3>
+
+      <!-- NEW: use saved address -->
+      <label class="use-saved-row">
+        <input type="checkbox" id="use-saved-address" />
+        Use last saved address (if available)
+      </label>
+      <label>
+        Full name<span style="color:red;">*</span>
+        <input id="ship-name" type="text" placeholder="Your full name" />
+      </label>
+
+      <label>
+        Address<span style="color:red;">*</span>
+        <textarea id="ship-address" placeholder="House no, street, area" rows="2"></textarea>
+      </label>
+
+
+      <label>
+        City<span style="color:red;">*</span>
+        <input id="ship-city" type="text" placeholder="City" />
+      </label>
+
+      <label>
+        Pincode<span style="color:red;">*</span>
+        <input id="ship-pincode" type="text" placeholder="6 digit pincode" />
+      </label>
+
+      <label>
+        Phone (optional)
+        <input id="ship-phone" type="text" placeholder="Mobile number" />
+      </label>
+
+      <div class="checkout-actions">
+        <button type="button" id="place-order-btn" class="primary">
+          Place order
+        </button>
+        <button type="button" id="cancel-checkout-btn" class="muted">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- load main app scripts -->
+  <script src="/app.js"></script>
+
+  <!-- small helpers only (logout + cart close outside) -->
+  <script>
+    // Close cart when clicking the close button
+    const closeCartBtn = document.getElementById('close-cart');
+    if (closeCartBtn) {
+      closeCartBtn.addEventListener('click', function () {
+        const drawer = document.getElementById('cart-drawer');
+        if (drawer) drawer.classList.add('hidden');
+      });
+    }
+
+    // Close cart when clicking outside the drawer
+    window.addEventListener('click', function (event) {
+      const drawer = document.getElementById('cart-drawer');
+      if (!drawer) return;
+      if (event.target === drawer) {
+        drawer.classList.add('hidden');
+      }
+    });
+
+    // Logout wiring: call /auth/logout (if exists) then go to login page
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', async () => {
+        try {
+          await fetch('/auth/logout', { method: 'POST' }).catch(() => { });
+        } finally {
+          window.location.href = '/login.html';
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

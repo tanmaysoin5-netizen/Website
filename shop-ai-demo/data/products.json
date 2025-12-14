@@ -1,0 +1,754 @@
+[
+  {
+    "id": "lux-shirt-01",
+    "name": "Premium Silk Shirt",
+    "price": 1299.00,
+    "image": "/images/jpeg-optimizer_PATP5241.jpg  ",
+    "description": "Soft silk shirt with refined finish.",
+    "tags": [
+      "shirt",
+      "silk",
+      "luxury"
+    ],
+    "color": "lightblue",
+    "style": "formal",
+    "category": "shirt",
+    "gender": "men"
+  },
+  {
+    "id": "designer-jeans-01",
+    "name": "Designer Black Jeans",
+    "price": 999.00,
+    "image": "/images/71WbBE6sPmL._AC_UY1100_.jpeg",
+    "description": "Premium-fit black jeans with stretch.",
+    "tags": [
+      "pants",
+      "jeans",
+      "black",
+      "designer"
+    ],
+    "color": "black",
+    "style": "casual",
+    "category": "pants",
+    "gender": "men"
+  },
+  {
+    "id": "lux-dress-01",
+    "name": "Evening Silk Dress",
+    "price": 2499.00,
+    "image": "/images/image.png",
+    "description": "Elegant evening dress in luxe silk.",
+    "tags": [
+      "dress",
+      "evening",
+      "silk"
+    ],
+    "color": "pink",
+    "style": "formal",
+    "category": "dress",
+    "gender": "women"
+  },
+  {
+    "id": "leather-jacket-01",
+    "name": "Genuine Leather Jacket",
+    "price": 799.00,
+    "images": [
+      "/images/image copy.png",
+      "/images/image copy 2.png"
+    ],
+    "description": "Classic genuine leather jacket.",
+    "tags": [
+      "jacket",
+      "leather",
+      "black"
+    ],
+    "color": "black",
+    "style": "casual",
+    "category": "jacket",
+    "gender": "unisex"
+  },
+  {
+    "id": "sneakers-premium-01",
+    "name": "Premium White Sneakers",
+    "price": 649.00,
+    "image": "/images/image copy 3.png",
+    "description": "Comfortable premium leather sneakers.",
+    "tags": [
+      "shoes",
+      "sneakers",
+      "white"
+    ],
+    "color": "white",
+    "style": "sport",
+    "category": "shoes",
+    "gender": "unisex"
+  },
+  {
+    "id": "chinos-luxe-01",
+    "name": "Tailored Beige Chinos",
+    "price": 549.00,
+    "image": "/images/image copy 4.png",
+    "description": "Smart tailored chinos for semi-formal wear.",
+    "tags": [
+      "pants",
+      "chinos",
+      "beige"
+    ],
+    "color": "beige",
+    "style": "smart",
+    "category": "pants",
+    "gender": "men"
+  },
+  {
+    "id": "men-watch-01",
+    "name": "Classic Men's Watch",
+    "price": 280.00,
+    "image": "/images/image copy 5.png",
+    "description": "Elegant classic watch for men.",
+    "tags": [
+      "accessory",
+      "watch",
+      "men"
+    ],
+    "color": "silver",
+    "style": "formal",
+    "category": "accessories",
+    "gender": "men"
+  },
+  {
+    "id": "men-earrings-01",
+    "name": "Stylish Men's Earrings",
+    "price": 89.00,
+    "image": "/images/Gold-Earring-For-Men-Blog-By-KuberBox-1260x1260.jpeg",
+    "description": "Trendy earrings designed for men.",
+    "tags": [
+      "accessory",
+      "earrings",
+      "men"
+    ],
+    "color": "gold",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "men"
+  },
+  {
+    "id": "men-shoes-01",
+    "name": "Leather Dress Shoes",
+    "price": 400.00,
+    "image": "/images/image copy 6.png",
+    "description": "Premium leather dress shoes for formal occasions.",
+    "tags": [
+      "shoes",
+      "leather",
+      "formal"
+    ],
+    "color": "black",
+    "style": "formal",
+    "category": "shoes",
+    "gender": "men"
+  },
+  {
+    "id": "men-sneakers-02",
+    "name": "Casual Sneakers",
+    "price": 700.00,
+    "image": "/images/image copy 7.png",
+    "description": "Comfortable sneakers for everyday wear.",
+    "tags": [
+      "shoes",
+      "sneakers",
+      "casual"
+    ],
+    "color": "blue",
+    "style": "sport",
+    "category": "shoes",
+    "gender": "men"
+  },
+  {
+    "id": "men-belt-01",
+    "name": "Leather Belt",
+    "price": 600.00,
+    "image": "/images/image copy 8.png",
+    "description": "Stylish leather belt for men.",
+    "tags": [
+      "accessory",
+      "belt",
+      "men"
+    ],
+    "color": "brown",
+    "style": "formal",
+    "category": "accessories",
+    "gender": "men"
+  },
+  {
+    "id": "women-heels-01",
+    "name": "Elegant Stiletto Heels",
+    "price": 749.00,
+    "image": "/images/image copy 9.png",
+    "description": "High-heel stilettos for special occasions.",
+    "tags": [
+      "shoes",
+      "heels",
+      "women"
+    ],
+    "color": "pink",
+    "style": "formal",
+    "category": "shoes",
+    "gender": "women"
+  },
+  {
+    "id": "women-sandals-01",
+    "name": "Summer Leather Sandals",
+    "price": 450.00,
+    "image": "/images/image copy 10.png",
+    "description": "Comfortable leather sandals for summer.",
+    "tags": [
+      "shoes",
+      "sandals",
+      "women"
+    ],
+    "color": "tan",
+    "style": "casual",
+    "category": "shoes",
+    "gender": "women"
+  },
+  {
+    "id": "women-bag-01",
+    "name": "Classic Tote Bag",
+    "price": 499.00,
+    "image": "/images/image copy 11.png",
+    "description": "Spacious tote bag for daily essentials.",
+    "tags": [
+      "bag",
+      "tote",
+      "women"
+    ],
+    "color": "cream",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "women"
+  },
+  {
+    "id": "women-blouse-01",
+    "name": "Silk Blouse",
+    "price": 399.00,
+    "image": "/images/image copy 12.png",
+    "description": "Lightweight silk blouse for office and evenings.",
+    "tags": [
+      "blouse",
+      "women",
+      "silk"
+    ],
+    "color": "ivory",
+    "style": "smart",
+    "category": "shirt",
+    "gender": "women"
+  },
+  {
+    "id": "women-skirt-01",
+    "name": "A-line Midi Skirt",
+    "price": 455.00,
+    "image": "/images/image copy 13.png",
+    "description": "Comfortable A-line midi skirt.",
+    "tags": [
+      "skirt",
+      "women",
+      "midi"
+    ],
+    "color": "beige",
+    "style": "casual",
+    "category": "dress",
+    "gender": "women"
+  },
+  {
+    "id": "women-coat-01",
+    "name": "Wool Winter Coat",
+    "price": 1999.00,
+    "image": "/images/image copy 14.png",
+    "description": "Warm wool coat for chilly days.",
+    "tags": [
+      "coat",
+      "wool",
+      "women"
+    ],
+    "color": "navy",
+    "style": "formal",
+    "category": "jacket",
+    "gender": "women"
+  },
+  {
+    "id": "men-tee-01",
+    "name": "Organic Cotton T-Shirt",
+    "price": 350.00,
+    "image": "/images/image copy 15.png",
+    "description": "Soft organic cotton t-shirt, everyday essential.",
+    "tags": [
+      "shirt",
+      "tshirt",
+      "men"
+    ],
+    "color": "blue ",
+    "style": "casual",
+    "category": "shirt",
+    "gender": "men"
+  },
+  {
+    "id": "men-hoodie-01",
+    "name": "Fleece Hoodie",
+    "price": 760.00,
+    "image": "/images/image copy 16.png",
+    "description": "Cozy fleece hoodie for weekends.",
+    "tags": [
+      "hoodie",
+      "men",
+      "casual"
+    ],
+    "color": "blue",
+    "style": "sport",
+    "category": "jacket",
+    "gender": "men"
+  },
+  {
+    "id": "men-formal-01",
+    "name": "Tailored Formal Shirt",
+    "price": 799.00,
+    "image": "/images/image copy 17.png",
+    "description": "Sharp tailored formal shirt for work.",
+    "tags": [
+      "shirt",
+      "formal",
+      "men"
+    ],
+    "color": "white",
+    "style": "formal",
+    "category": "shirt",
+    "gender": "men"
+  },
+  {
+    "id": "unisex-hoodie-01",
+    "name": "Zip-Up Unisex Hoodie",
+    "price": 549.00,
+    "image": "/images/image copy 18.png",
+    "description": "Lightweight zip-up hoodie for all genders.",
+    "tags": [
+      "hoodie",
+      "unisex",
+      "casual"
+    ],
+    "color": "gray",
+    "style": "casual",
+    "category": "jacket",
+    "gender": "unisex"
+  },
+  {
+    "id": "unisex-cap-01",
+    "name": "Classic Baseball Cap",
+    "price": 39.00,
+    "image": "/images/image copy 19.png",
+    "description": "Adjustable cap for everyday wear.",
+    "tags": [
+      "cap",
+      "unisex",
+      "accessory"
+    ],
+    "color": "beige",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "unisex"
+  },
+  {
+    "id": "unisex-socks-01",
+    "name": "Comfort Ankle Socks (3-pack)",
+    "price": 200.00,
+    "images": [
+      "/images/image copy 20.png",
+      "/images/image copy 21.png"
+    ],
+    "description": "Soft breathable ankle socks, multipack.",
+    "tags": [
+      "socks",
+      "unisex",
+      "accessory"
+    ],
+    "color": "white",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "unisex"
+  },
+  {
+    "id": "summer-dress-02",
+    "name": "Casual Summer Dress",
+    "price": 429.00,
+    "image": "/images/image copy 22.png",
+    "description": "Light cotton summer dress for warm days.",
+    "tags": [
+      "dress",
+      "women",
+      "casual"
+    ],
+    "color": "peach",
+    "style": "casual",
+    "category": "dress",
+    "gender": "women"
+  },
+  {
+    "id": "polo-02",
+    "name": "Striped Polo Shirt",
+    "price": 349.00,
+    "image": "/images/image copy 23.png",
+    "description": "Smart striped polo for casual Fridays.",
+    "tags": [
+      "polo",
+      "shirt",
+      "men"
+    ],
+    "color": "navy",
+    "style": "smart",
+    "category": "shirt",
+    "gender": "men"
+  },
+  {
+    "id": "wool-jacket-01",
+    "name": "Wool Blend Jacket",
+    "price": 1199.00,
+    "image": "/images/image copy 24.png",
+    "description": "Refined wool blend jacket for cooler days.",
+    "tags": [
+      "jacket",
+      "wool",
+      "formal"
+    ],
+    "color": "charcoal",
+    "style": "formal",
+    "category": "jacket",
+    "gender": "men"
+  },
+  {
+    "id": "trench-01",
+    "name": "Classic Trench Coat",
+    "price": 2199.00,
+    "images": [
+      "/images/image copy 25.png",
+      "/images/image copy 26.png"
+    ],
+    "description": "Water-resistant trench with classic cut.",
+    "tags": [
+      "coat",
+      "trench",
+      "unisex"
+    ],
+    "color": "beige",
+    "style": "formal",
+    "category": "jacket",
+    "gender": "unisex"
+  },
+  {
+    "id": "shorts-01",
+    "name": "Linen Summer Shorts",
+    "price": 279.00,
+    "images": [
+      "/images/image copy 27.png",
+      "/images/image copy 28.png"
+    ],
+    "description": "Breathable linen shorts for hot weather.",
+    "tags": [
+      "shorts",
+      "men",
+      "casual"
+    ],
+    "color": "khaki",
+    "style": "casual",
+    "category": "pants",
+    "gender": "men"
+  },
+  {
+    "id": "swimwear-01",
+    "name": "Classic Swim Trunks",
+    "price": 199.00,
+    "image": "/images/image copy 29.png",
+    "description": "Quick-dry swim trunks for beach days.",
+    "tags": [
+      "swim",
+      "men",
+      "beach"
+    ],
+    "color": "blue",
+    "style": "sport",
+    "category": "pants",
+    "gender": "men"
+  },
+  {
+    "id": "blazer-01",
+    "name": "Slim Fit Blazer",
+    "price": 1599.00,
+    "image": "/images/image copy 30.png",
+    "description": "Slim fit blazer for smart events.",
+    "tags": [
+      "blazer",
+      "formal",
+      "men"
+    ],
+    "color": "navy",
+    "style": "formal",
+    "category": "jacket",
+    "gender": "men"
+  },
+  {
+    "id": "leggings-01",
+    "name": "High-Waist Leggings",
+    "price": 279.00,
+    "image": "/images/image copy 31.png",
+    "description": "Stretchy high-waist leggings for workouts.",
+    "tags": [
+      "leggings",
+      "women",
+      "sport"
+    ],
+    "color": "black",
+    "style": "sport",
+    "category": "pants",
+    "gender": "women"
+  },
+  {
+    "id": "sports-shoes-02",
+    "name": "Running Trainers",
+    "price": 849.00,
+    "image": "/images/image copy 32.png",
+    "description": "Lightweight trainers built for speed.",
+    "tags": [
+      "shoes",
+      "running",
+      "sport"
+    ],
+    "color": "white",
+    "style": "sport",
+    "category": "shoes",
+    "gender": "unisex"
+  },
+  {
+    "id": "boots-01",
+    "name": "Rugged Work Boots",
+    "price": 1299.00,
+    "image": "/images/image copy 33.png",
+    "description": "Heavy-duty boots for outdoor work.",
+    "tags": [
+      "boots",
+      "work",
+      "men"
+    ],
+    "color": "brown",
+    "style": "utility",
+    "category": "shoes",
+    "gender": "men"
+  },
+  {
+    "id": "purse-01",
+    "name": "Evening Clutch Purse",
+    "price": 399.00,
+    "image": "/images/image copy 34.png",
+    "description": "Stylish clutch purse for evenings out.",
+    "tags": [
+      "bag",
+      "clutch",
+      "women"
+    ],
+    "color": "red",
+    "style": "formal",
+    "category": "accessories",
+    "gender": "women"
+  },
+  {
+    "id": "sunglasses-01",
+    "name": "Polarized Sunglasses",
+    "price": 250.00,
+    "image": "/images/image copy 35.png",
+    "description": "UV-protective polarized sunglasses.",
+    "tags": [
+      "accessory",
+      "sunglasses",
+      "unisex"
+    ],
+    "color": "black",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "unisex"
+  },
+  {
+    "id": "hat-01",
+    "name": "Wide Brim Hat",
+    "price": 500.00,
+    "image": "/images/image copy 36.png",
+    "description": "Stylish wide brim hat for sunny days.",
+    "tags": [
+      "hat",
+      "women",
+      "accessory"
+    ],
+    "color": "cream",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "women"
+  },
+  {
+    "id": "puffer-jacket-01",
+    "name": "Lightweight Puffer Jacket",
+    "price": 899.00,
+    "image": "/images/image copy 37.png",
+    "description": "Insulated puffer jacket without bulk.",
+    "tags": [
+      "jacket",
+      "puffer",
+      "unisex"
+    ],
+    "color": "teal",
+    "style": "casual",
+    "category": "jacket",
+    "gender": "unisex"
+  },
+  {
+    "id": "bluetooth-speaker-01",
+    "name": "Mini Bluetooth Speaker",
+    "price": 1200.00,
+    "image": "/images/image copy 40.png",
+    "description": "Compact speaker with powerful bass.",
+    "tags": [
+      "electronics",
+      "speaker",
+      "accessory"
+    ],
+    "color": "black",
+    "style": "casual",
+    "category": "electronics",
+    "gender": "unisex"
+  },
+  {
+    "id": "wireless-earbuds-01",
+    "name": "Wireless Earbuds",
+    "price": 2500.00,
+    "image": "/images/image copy 41.png",
+    "description": "True wireless earbuds with noise cancellation.",
+    "tags": [
+      "electronics",
+      "earbuds",
+      "accessory"
+    ],
+    "color": "white",
+    "style": "casual",
+    "category": "electronics",
+    "gender": "unisex"
+  },
+  {
+    "id": "women-top-01",
+    "name": "Floral Print Top",
+    "price": 599.00,
+    "image": "/images/image copy 42.png",
+    "description": "Breezy floral top for summer days.",
+    "tags": [
+      "top",
+      "women",
+      "summer"
+    ],
+    "color": "pink",
+    "style": "casual",
+    "category": "shirt",
+    "gender": "women"
+  },
+  {
+    "id": "women-heels-02",
+    "name": "Classic Black Pumps",
+    "price": 1299.00,
+    "image": "/images/image copy 43.png",
+    "description": "Timeless black pumps for office or party.",
+    "tags": [
+      "shoes",
+      "heels",
+      "women"
+    ],
+    "color": "black",
+    "style": "formal",
+    "category": "shoes",
+    "gender": "women"
+  },
+  {
+    "id": "men-loafers-01",
+    "name": "Suede Loafers",
+    "price": 1500.00,
+    "image": "/images/image copy 44.png",
+    "description": "Comfortable suede loafers.",
+    "tags": [
+      "shoes",
+      "loafers",
+      "men"
+    ],
+    "color": "brown",
+    "style": "smart",
+    "category": "shoes",
+    "gender": "men"
+  },
+  {
+    "id": "smart-watch-01",
+    "name": "Fitness Smart Watch",
+    "price": 3500.00,
+    "image": "/images/image copy 45.png",
+    "description": "Track your fitness goals with style.",
+    "tags": [
+      "electronics",
+      "watch",
+      "accessory"
+    ],
+    "color": "black",
+    "style": "sport",
+    "category": "electronics",
+    "gender": "unisex"
+  },
+  {
+    "id": "women-dress-03",
+    "name": "Maxi Boho Dress",
+    "price": 1800.00,
+    "image": "/images/image copy 46.png",
+    "description": "Flowy maxi dress with boho prints.",
+    "tags": [
+      "dress",
+      "women",
+      "boho"
+    ],
+    "color": "red",
+    "style": "casual",
+    "category": "dress",
+    "gender": "women"
+  },
+  {
+    "id": "woolen-cap-01",
+    "name": "Woolen Cap",
+    "price": 499.00,
+    "images": [
+      "/images/image copy 47.png",
+      "/images/image copy 48.png"
+    ],
+    "description": "Warm woolen cap for winter.",
+    "tags": [
+      "accessory",
+      "cap",
+      "winter"
+    ],
+    "color": "grey",
+    "style": "casual",
+    "category": "accessories",
+    "gender": "unisex"
+  },
+  {
+    "id": "basic-tee-01",
+    "name": "Basic Cotton T-Shirt",
+    "price": 399.00,
+    "image": "/images/image copy 49.png",
+    "description": "Essential cotton t-shirt.",
+    "tags": [
+      "shirt",
+      "tshirt",
+      "casual"
+    ],
+    "color": "white",
+    "style": "casual",
+    "category": "shirt",
+    "gender": "unisex"
+  }
+]

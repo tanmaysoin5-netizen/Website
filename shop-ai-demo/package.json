@@ -1,0 +1,25 @@
+{
+  "name": "shop-ai-demo",
+  "version": "1.0.0",
+  "description": "Simple shopping site with cart and AI-like recommendations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^1.20.3",
+    "connect-mongo": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.2.1",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
+  }
+}
